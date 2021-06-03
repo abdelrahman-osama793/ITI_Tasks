@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        task2.1
+    </title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function displayUnicode(e) {
+            var unicode;
+            if (unicode == e.keyCode) {
+                alert(unicode);
+            } else if (e.keyCode === 17) {
+                alert("You pressed Ctrl");
+            } else if (e.keyCode === 16) {
+                alert("You pressed Shift");
+            } else if (e.keyCode === 18) {
+                alert("You pressed Alt");
+            }
+        }
+    </script>
+    <form>
+        <input type="text" size="2" maxlength="1" onkeyup="displayUnicode(event); this.select()" />
+    </form>
+</body>
+
+</html>

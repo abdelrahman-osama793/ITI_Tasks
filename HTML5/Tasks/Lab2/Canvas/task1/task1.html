@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas width="800" height="1500" id="canvas"></canvas>
+    <script>
+        var context = document.getElementById('canvas');
+        var ctx = context.getContext('2d');
+        var lineX = 0;
+        var lineY = 1000;
+
+
+        ctx.beginPath();
+        ctx.rect(20, 20, 500, 450);
+        ctx.stroke();
+
+        var cyanGrad = ctx.createLinearGradient(50, 50, 50, 250)
+        cyanGrad.addColorStop(0, "#00f7ff");
+        cyanGrad.addColorStop(1, "#fff");
+        ctx.fillStyle = cyanGrad;
+        ctx.fillRect(40, 40, 450, 200);
+
+        var greenGrad = ctx.createLinearGradient(50, 250, 50, 450)
+        greenGrad.addColorStop(0, "#95f98f");
+        greenGrad.addColorStop(1, "#fff");
+        ctx.fillStyle = greenGrad;
+        ctx.fillRect(40, 240, 450, 200);
+
+        ctx.lineWidth = '4';
+        var blackGrad = ctx.createLinearGradient(200, 250, 200, 350);
+        blackGrad.addColorStop(0, "#000");
+        blackGrad.addColorStop(1, "rgba(0,0,0,0)");
+
+        ctx.beginPath();
+        ctx.moveTo(100, 150);
+        ctx.lineTo(392, 150);
+        ctx.stroke();
+
+        ctx.strokeStyle = blackGrad;
+        ctx.moveTo(102, 150);
+        ctx.lineTo(102, 350);
+        ctx.moveTo(390, 150);
+        ctx.lineTo(390, 350);
+        ctx.stroke();
+
+
+        //task2
+
+        var blueGrad = ctx.createRadialGradient(280, 800, 10, 350, 800, 250);
+        blueGrad.addColorStop(0, "white");
+        blueGrad.addColorStop(1, "blue");
+        ctx.fillStyle = blueGrad;
+        ctx.beginPath();
+        ctx.arc(250, 800, 150, 0, 2 * Math.PI);
+        ctx.fill();
+
+        var blueGrad = ctx.createRadialGradient(280, 900, 5, 350, 900, 250);
+        blueGrad.addColorStop(0, "white");
+        blueGrad.addColorStop(1, "blue");
+        ctx.fillStyle = blueGrad;
+        ctx.beginPath();
+        ctx.arc(250, 800, 120, 0, 2 * Math.PI);
+        ctx.fill();
+
+        ctx.font = "220px sans-serif";
+        ctx.fillStyle = "white";
+        ctx.fillText("A", 178, 870);
+
+        //task3
+        ctx.strokeStyle = 'black';
+        ctx.beginPath();
+        ctx.moveTo(0, 1000);
+        var interval = setInterval(() => {
+            if (lineX < 500 && lineY < 1500) {
+                ctx.lineTo(lineX += 5, lineY += 5);
+                ctx.lineWidth = 1;
+                ctx.stroke();
+            } else {
+                stopInterval();
+            }
+        }, 100);
+
+        function stopInterval() {
+            clearInterval(interval);
+            alert("Animation Ended");
+
+        }
+    </script>
+</body>
+
+</html>

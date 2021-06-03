@@ -1,0 +1,28 @@
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body onload="moveImages()">
+    <div class="image-container">
+        <div onmouseover="stopMovement()" onmouseout="moveImages()">
+            <img src="marble1.jpg"/>
+            <img src="marble1.jpg"/>
+            <img src="marble1.jpg"/>
+            <img src="marble1.jpg"/>
+            <img src="marble1.jpg"/>
+        </div>
+    </div>
+    <style>
+        .image-container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <script src="marbles.js"></script>
+</body>
+
+</html>

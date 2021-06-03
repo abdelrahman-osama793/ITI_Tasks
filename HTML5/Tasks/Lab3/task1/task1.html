@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inputContainer {
+            margin-bottom: 15px;
+            max-width: 300px;
+        }
+
+        .inputFields {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .inputFields:invalid {
+            border: 3px solid red;
+        }
+
+        .inputFields:valid {
+            border: 3px solid blue;
+        }
+
+        #emailInput:invalid+.email::after {
+            content: "Please enter a valid email";
+            color: red;
+        }
+
+        #passwordInput:invalid+.password::after {
+            content: "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters";
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="inputContainer">
+        <input type="email" id="emailInput" class="inputFields email" placeholder="Email"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+        <span class="email"></span>
+    </div>
+    <div class="inputContainer">
+        <input type="password" id="passwordInput" class="inputFields password" placeholder="Password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more
+            characters" required>
+        <span class="password"></span>
+    </div>
+    <div class="inputContainer">
+        <input type="submit" value="Submit">
+    </div>
+</body>
+
+</html>

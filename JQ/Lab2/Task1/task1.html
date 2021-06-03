@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Task 1 </title>
+</head>
+
+<body style="background-color: beige;">
+    <div id="div1">
+        <input id="galleryBtn" type="button" value="Gallery">
+        <input id="servicesBtn" type="button" value="Services">
+        <input id="aboutBtn" type="button" value="About">
+        <input id="complainBtn" type="button" value="Complain">
+    </div>
+    <div class="about" style="display: none; text-align: center;">
+        <h6 style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quam
+            repudiandae sunt voluptate? Dolorum nam quia repellat quos itaque error cumque, reprehenderit quibusdam
+            voluptatem minus sapiente veniam, cum dolorem ex?</h6>
+    </div>
+    <div class="gallery" style="display: none;">
+        <div class="w3-content w3-display-container">
+            <img st class="mySlides" src="./images/1.jpg" style="width:100%;height: 100%;">
+            <img st class="mySlides" src="./images/2.jpg" style="width:100%;height: 100%;">
+            <img st class="mySlides" src="./images/3.png" style="width:100%;height: 100%;">
+            <img st class="mySlides" src="./images/4.jpg" style="width:100%;height: 100%;">
+            <img st class="mySlides" src="./images/5.jpg" style="width:100%;height: 100%;">
+
+            <button class="w3-button w3-black w3-display-left" onclick="increaseIndex(-1)">&#10096;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="increaseIndex(1)">&#10097;</button>
+        </div>
+    </div>
+    <div class="services" style="display: none;">
+        <button>Service 1</button>
+        <button>Service 2</button>
+        <button>Service 3</button>
+        <button>Service 4</button>
+    </div>
+    <div class="complain" style="display: none; margin-top: 20px; padding-top: 20px; border-radius: 10px;">
+        <div>
+            <form id="form" style="text-align: center;">
+                <input name="name" type="text" value="" placeholder="Enter Your Name">
+                <br>
+                <input name="email" type="text" value="" placeholder="Enter Your Email">
+                <br>
+                <input name="phone" type="text" value="" placeholder="Enter Your Phone">
+                <br>
+                <input name="complain" type="text" value="" placeholder="Enter Your Complain">
+                <br>
+                <input class="submitBtn" type="button" value="Submit">
+            </form>
+            <div id="showComplain" style="display: none;"></div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

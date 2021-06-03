@@ -1,0 +1,32 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.slideshow-container{
+    width: 40%;
+    overflow: hidden;
+    position: relative;
+    height: 400;
+}
+
+.slideshow-container .slideshow-item,
+.slideshow-container .slideshow-item--hidden {
+    display: none;
+}
+
+.slideshow-container .slideshow-item img{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.slideshow-container .slideshow-item--visible{
+    display: block;
+}
+
+.slideshow-container .slideshow-actions{
+    display: flex;
+    justify-content: space-between;
+}

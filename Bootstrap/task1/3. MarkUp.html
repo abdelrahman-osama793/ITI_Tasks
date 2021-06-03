@@ -1,0 +1,520 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The Flower Blog</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale =1.0" />
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
+    <style>
+      #intro {
+        background: #467612 url(images/intro_background.png) repeat-x;
+        border-radius: 1rem;
+      }
+
+      #intro p {
+        color: #d9f499;
+      }
+
+      #intro img {
+        border-radius: 1em;
+      }
+
+      aside section {
+        background: url("images/sidebar_section_background.png") repeat-x;
+        margin: 1.3em 0 0 1.3em;
+        padding: 0.68em 1.3em;
+        border-radius: 0.68em;
+      }
+
+      aside section header h3 {
+        line-height: 1.3em;
+        font-size: 1.2em;
+        padding: 0.68em 0;
+      }
+
+      aside section ul {
+        list-style: none;
+        margin: 0 0 0 0.5em;
+      }
+
+      aside section ul li a {
+        text-decoration: none;
+        color: black;
+      }
+
+      aside section ul li a:hover {
+        text-decoration: underline;
+        color: black;
+      }
+
+      .blogPost header p a {
+        text-decoration: underline;
+      }
+
+      footer {
+        background: #222;
+      }
+
+      #comments article:nth-child(odd) {
+        background: #e3e3e3;
+        border: 1px solid #d7d7d7;
+        border-radius: 0.86em;
+      }
+
+      .row > * {
+        padding-right: 0 !important;
+      }
+
+      footer div.row {
+        padding-left: 0 !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="row">
+        <h1 class="mt-5 mb-5 fw-bold display-5">The Flower Blog</h1>
+      </header>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#toggleMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="toggleMenu">
+          <ul class="navbar-nav text-center">
+            <li class="nav-item mx-lg-5">
+              <a href="#" class="nav-link active">Blog</a>
+            </li>
+            <li class="nav-item mx-lg-5">
+              <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item mx-lg-5">
+              <a href="#" class="nav-link">Archives</a>
+            </li>
+            <li class="nav-item mx-lg-5">
+              <a href="#" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item mx-lg-5">
+              <a href="#" class="nav-link">
+                <i class="bi bi-rss text-muted"></i>
+                Subscribe via. RSS
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container col-11" id="img-conrainer">
+      <section id="intro" class="row position-relative mt-4">
+        <h2
+          class="
+            col-7
+            p-3
+            position-static
+            text-white
+            p-md-3 p-2
+            col-sm-9
+            p-lg-5
+            col-lg-8
+          "
+        >
+          Do you love flowers as much as we do?
+        </h2>
+        <p
+          class="
+            col-md-10
+            position-absolute
+            top-50
+            px-md-3
+            d-none d-md-block
+            px-lg-5
+            col-lg-6
+          "
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+        </p>
+        <img
+          src="images/intro_flower.png"
+          class="img-fluid col-8 offset-4"
+          alt="Flower"
+        />
+      </section>
+
+      <div id="content" class="row">
+        <div id="mainContent" class="col-12 col-lg-8">
+          <section>
+            <article class="blogPost row">
+              <header class="col-12">
+                <h2 class="fw-bold lh-lg pb-1 pt-3">
+                  This is the title of a blog post
+                </h2>
+                <p class="fst-italic pb-3">
+                  Posted on June 29th 2009 by
+                  <a href="#" class="text-muted">Mads Kjaer</a> -
+                  <a href="#comments" class="text-muted">3 comments</a>
+                </p>
+              </header>
+              <div class="row">
+                <p pb-3 class="col-12">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                  euismod tellus eu orci imperdiet nec rutrum lacus blandit.
+                  Cras enim nibh, sodales ultricies elementum vel, fermentum id
+                  tellus. Proin metus odio, ultricies eu pharetra dictum,
+                  laoreet id odio. Curabitur in odio augue. Morbi congue auctor
+                  interdum. Phasellus sit amet metus justo. Phasellus vitae
+                  tellus orci, at elementum ipsum. In in quam eget diam
+                  adipiscing condimentum. Maecenas gravida diam vitae nisi
+                  convallis vulputate quis sit amet nibh. Nullam ut velit
+                  tortor. Curabitur ut elit id nisl volutpat consectetur ac ac
+                  lorem. Quisque non elit et elit lacinia lobortis nec a velit.
+                  Sed ac nisl sed enim consequat porttitor.
+                </p>
+                <figure class="col-12 figure mt-1 mb-3">
+                  <img
+                    src="images/flower.png"
+                    alt="Flower"
+                    class="img-fluid figure-img shadow"
+                  />
+                  <figcaption class="figure-caption">
+                    <i>This is a beautiful flower</i>
+                  </figcaption>
+                </figure>
+                <br />
+                <p class="col-12">
+                  Pellentesque ut sapien arcu, egestas mollis massa. Fusce
+                  lectus leo, fringilla at aliquet sit amet, volutpat non erat.
+                  Aenean molestie nibh vitae turpis venenatis vel accumsan nunc
+                  tincidunt. Suspendisse id purus vel felis auctor mattis non ac
+                  erat. Pellentesque sodales venenatis condimentum. Aliquam sit
+                  amet nibh nisi, ut pulvinar est. Sed ullamcorper nisi vel
+                  tortor volutpat eleifend. Vestibulum iaculis ullamcorper diam
+                  consectetur sagittis. Quisque vitae mauris ut elit semper
+                  condimentum varius nec nisl. Nulla tempus porttitor dolor ac
+                  eleifend. Proin vitae purus lectus, a hendrerit ipsum. Aliquam
+                  mattis lacinia risus in blandit.
+                </p>
+                <p class="col-12">
+                  Vivamus vitae nulla dolor. Suspendisse eu lacinia justo.
+                  Vestibulum a felis ante, non aliquam leo. Aliquam eleifend,
+                  est viverra semper luctus, metus purus commodo elit, a
+                  elementum nisi lectus vel magna. Praesent faucibus leo sit
+                  amet arcu vehicula sed facilisis eros aliquet. Etiam sodales,
+                  enim sit amet mollis vestibulum, ipsum sapien accumsan lectus,
+                  eget ultricies arcu velit ut diam. Aenean fermentum luctus
+                  nulla, eu malesuada urna consequat in. Pellentesque habitant
+                  morbi tristique senectus et netus et malesuada fames ac turpis
+                  egestas. Pellentesque massa lacus, sodales id facilisis ac,
+                  lobortis sed arcu. Donec hendrerit fringilla ligula, ac rutrum
+                  nulla bibendum id. Cras sapien ligula, tincidunt eget euismod
+                  nec, ultricies eu augue. Nulla vitae velit sollicitudin magna
+                  mattis eleifend. Nam enim justo, vulputate vitae pretium ac,
+                  rutrum at turpis. Aenean id magna neque. Sed rhoncus aliquet
+                  viverra.
+                </p>
+              </div>
+            </article>
+          </section>
+          <hr />
+          <section id="comments" class="row">
+            <h3 class="fw-bold lh-lg">Comments</h3>
+            <article class="row">
+              <header class="offset-1 col-md-3 col-10">
+                <a
+                  href="#"
+                  class="
+                    fw-bold
+                    pt-2
+                    text-decoration-underline text-reset
+                    d-block
+                  "
+                  >George Washington</a
+                >
+                on June 29th 2009 at 23:35
+              </header>
+              <p class="offset-1 col-md-6 col-10 pt-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut.
+              </p>
+            </article>
+            <article class="row">
+              <header class="offset-1 col-md-3 col-10">
+                <a
+                  href="#"
+                  class="
+                    fw-bold
+                    pt-2
+                    text-decoration-underline text-reset
+                    d-block
+                  "
+                  >Benjamin Franklin</a
+                >
+                on June 29th 2009 at 23:40
+              </header>
+              <p class="offset-1 col-md-6 col-10 pt-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut.
+              </p>
+            </article>
+            <article class="row">
+              <header class="offset-1 col-md-3 col-10">
+                <a
+                  href="#"
+                  class="
+                    fw-bold
+                    pt-2
+                    text-decoration-underline text-reset
+                    d-block
+                  "
+                  >Barack Obama</a
+                >
+                on June 29th 2009 at 23:59
+              </header>
+              <p class="offset-1 col-md-6 col-10 pt-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut.
+              </p>
+            </article>
+          </section>
+          <hr />
+          <form action="#" method="post">
+            <h3 class="fw-bold lh-lg">Post a comment</h3>
+            <p>
+              <label
+                for="name"
+                class="
+                  pb-2
+                  offset-1
+                  col-12 col-sm-2
+                  text-sm-end text-start
+                  fw-bold
+                "
+              >
+                Name</label
+              >
+              <input
+                name="name"
+                id="name"
+                type="text"
+                class="offset-1 col-sm-5 col-6"
+              />
+            </p>
+            <p>
+              <label
+                for="email"
+                class="
+                  pb-1
+                  offset-1
+                  col-12 col-sm-2
+                  text-sm-end text-start
+                  fw-bold
+                "
+              >
+                E-mail</label
+              >
+              <input
+                name="email"
+                id="email"
+                type="text"
+                class="offset-1 col-sm-5 col-6"
+              />
+            </p>
+            <p>
+              <label
+                for="website"
+                class="
+                  pb-1
+                  offset-1
+                  col-12 col-sm-2
+                  text-sm-end text-start
+                  fw-bold
+                "
+              >
+                Website</label
+              >
+              <input
+                name="website"
+                id="website"
+                type="text"
+                class="offset-1 col-sm-5 col-6"
+              />
+            </p>
+            <p>
+              <label
+                for="comment"
+                class="
+                  pb-1
+                  offset-1
+                  col-12 col-sm-2
+                  text-sm-end text-start
+                  fw-bold
+                "
+              >
+                Comment</label
+              >
+              <textarea
+                name="comment"
+                id="comment"
+                class="offset-1 col-sm-5 col-6 form-control-lg"
+              ></textarea>
+            </p>
+            <p>
+              <input
+                type="submit"
+                value="Post comment"
+                class="btn-sm btn-secondary offset-1 col-3 col-md-2 offset-md-2"
+              />
+            </p>
+          </form>
+        </div>
+
+        <aside class="col-lg-4 d-none d-lg-block pe-0">
+          <section>
+            <header>
+              <h3 class="fw-bold">Categories</h3>
+            </header>
+            <ul>
+              <li><a href="#">Lorem ipsum dolor</a></li>
+              <li><a href="#">Sit amet consectetur</a></li>
+              <li><a href="#">Adipisicing elit sed</a></li>
+              <li><a href="#">Do eiusmod tempor</a></li>
+              <li><a href="#">Incididunt ut labore</a></li>
+            </ul>
+          </section>
+          <section>
+            <header>
+              <h3 class="fw-bold">Archives</h3>
+            </header>
+            <ul>
+              <li><a href="#">December 2008</a></li>
+              <li><a href="#">January 2009</a></li>
+              <li><a href="#">February 2009</a></li>
+              <li><a href="#">March 2009</a></li>
+              <li><a href="#">April 2009</a></li>
+              <li><a href="#">May 2009</a></li>
+              <li><a href="#">June 2009</a></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </div>
+
+    <footer class="container-fluid">
+      <div class="row mx-md-auto container">
+        <section id="about" class="col-lg-4 col-12">
+          <header>
+            <h3 class="fw-bold text-light lh-lg py-2">About</h3>
+          </header>
+          <p class="text-muted ms-3">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco
+            <a href="#" class="text-muted fw-bolder">laboris nisi ut aliquip</a>
+            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.
+          </p>
+        </section>
+        <section id="blogroll" class="col-lg-3 offset-lg-1 col-12">
+          <header>
+            <h3 class="fw-bold text-light lh-lg py-2">Blogroll</h3>
+          </header>
+          <ul>
+            <li class="text-muted fw-bolder pb-1">
+              <a href="#" class="text-muted fw-bolder">NETTUTS+</a>
+            </li>
+            <li class="text-muted fw-bolder pb-1">
+              <a href="#" class="text-muted fw-bolder">FreelanceSwitch</a>
+            </li>
+            <li class="text-muted fw-bolder pb-1">
+              <a href="#" class="text-muted fw-bolder">In The Woods</a>
+            </li>
+            <li class="text-muted fw-bolder pb-1">
+              <a href="#" class="text-muted fw-bolder">Netsetter</a>
+            </li>
+            <li class="text-muted fw-bolder pb-1">
+              <a href="#" class="text-muted fw-bolder">PSDTUTS+</a>
+            </li>
+          </ul>
+        </section>
+        <section id="popular" class="col-lg-4 col-12">
+          <header>
+            <h3 class="fw-bold text-light lh-lg py-2">Popular</h3>
+          </header>
+          <ul>
+            <li class="text-muted fw-bolder pb-1">
+              <a href="#" class="text-muted fw-bolder"
+                >This is the title of a blog post</a
+              >
+            </li>
+            <li class="text-muted fw-bolder pb-1">
+              <a href="#" class="text-muted fw-bolder"
+                >Lorem ipsum dolor sit amet</a
+              >
+            </li>
+            <li class="text-muted fw-bolder pb-1">
+              <a href="#" class="text-muted fw-bolder"
+                >Consectetur adipisicing elit, sed do eiusmod</a
+              >
+            </li>
+            <li class="text-muted fw-bolder pb-1">
+              <a href="#" class="text-muted fw-bolder">Duis aute irure dolor</a>
+            </li>
+            <li class="text-muted fw-bolder pb-1">
+              <a href="#" class="text-muted fw-bolder"
+                >Excepteur sint occaecat cupidatat</a
+              >
+            </li>
+            <li class="text-muted fw-bolder pb-1">
+              <a href="#" class="text-muted fw-bolder"
+                >Reprehenderit in voluptate velit</a
+              >
+            </li>
+            <li class="text-muted fw-bolder pb-1">
+              <a href="#" class="text-muted fw-bolder"
+                >Officia deserunt mollit anim id est laborum</a
+              >
+            </li>
+            <li class="text-muted fw-bolder pb-1">
+              <a href="#" class="text-muted fw-bolder"
+                >Lorem ipsum dolor sit amet</a
+              >
+            </li>
+          </ul>
+        </section>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

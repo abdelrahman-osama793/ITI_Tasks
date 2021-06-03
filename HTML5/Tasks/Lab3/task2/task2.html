@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #button_blink {
+            position: relative;
+            background-color: palevioletred;
+            border-radius: 5px;
+            width: 200px;
+            height: 50px;
+            left: 40%;
+            top: 300px;
+            box-shadow: 0px 0px 10px 5px blueviolet;
+        }
+
+        @keyframes blinkAction {
+            from {
+                background-color: blueviolet;
+                box-shadow: 0px 0px 10px 5px blueviolet;
+            }
+
+            to {
+                background-color: thistle;
+                box-shadow: 0px 0px 10px 5px thistle;
+            }
+        }
+
+        #button_blink:hover {
+            animation: blinkAction 0.5s linear 0s infinite alternate;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" id="button_blink" value="Hover to Blink">
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="imageCanvas" width="970" height="550" style="border: 5px solid brown"></canvas>
+    <script>
+        var context = document.querySelector('#imageCanvas').getContext('2d');
+        var canvasImage = new Image();
+        canvasImage.src = '2.jpg'
+        canvasImage.onload = () => {
+            context.drawImage(canvasImage, 0, 0, 1080, 550);
+            context.shadowOffsetX = 10;
+            context.shadowOffsetY = 5;
+            context.shadowBlur = 5;
+            context.shadowColor = "black";
+            context.fillStyle = "white";
+            context.font = "80px Comic Sans MS";
+            context.fillText("Neon Genesis", 20, 80);
+        }
+    </script>
+</body>
+
+</html>
