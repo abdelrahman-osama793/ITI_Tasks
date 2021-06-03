@@ -1,0 +1,25 @@
+<form [formGroup]="ourValidationForm" class="form">
+  <div class="firstForm">
+    <input
+      type="text"
+      placeholder="Enter you first name"
+      formControlName="firstName"
+    /><br />
+    <div class="invalidDiv" *ngIf="!nameValid">
+      Name is not valid must be more than 2 characters
+    </div>
+    <br />
+    <input
+      type="number"
+      placeholder="Enter you age"
+      formControlName="age"
+    /><br />
+    <div class="invalidDiv" *ngIf="!ageValid">
+      You have to be at least 18 and not more than 60
+    </div>
+    <br />
+    <br />
+    <br />
+    <input type="button" class="buttons" value="Add" (click)="addNewRecord()" />
+  </div>
+</form>

@@ -1,0 +1,14 @@
+<div id="imageDiv">
+  <div id="card-container">
+    <h2>{{ user.name }}</h2>
+    <h3>{{ user.email | customP}}</h3>
+    <h5>
+      {{ user.address.street }}, {{ user.address.suite }},
+      {{ user.address.city }}, {{ user.address.zipcode }}
+    </h5>
+    <h5>{{ user.website }}</h5>
+    <h5>{{ user.company.name|customP}}</h5>
+    <h5>{{ user.company.catchPhrase }}</h5>
+    <h5>{{ user.company.bs }}</h5>
+  </div>
+</div>
