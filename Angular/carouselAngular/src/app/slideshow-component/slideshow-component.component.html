@@ -1,0 +1,10 @@
+  <div class="container">
+    <img [src]="imageSrc">
+    <div class="buttonDiv">
+      <input type="button" class="buttons" value="&lt;&lt;=" (click)="previous()">
+      <input type="button" class="buttons" value="Start" (click)="slideshow()">
+      <input type="button" class="buttons" value="Reset" (click)="reset()">
+      <input type="button" class="buttons" value="Pause" (click)="pause()">
+      <input type="button" class="buttons" value="=&gt;&gt;" (click)="next()">
+    </div>
+  </div>
