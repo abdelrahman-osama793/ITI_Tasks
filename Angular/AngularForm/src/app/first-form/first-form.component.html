@@ -1,0 +1,46 @@
+<div class="content">
+
+  <div class="firstForm">
+    <input type="text" class="username" placeholder="Enter you FullName" [(ngModel)]="fullName">
+    <br>
+    {{fullName}}
+    <br>
+    <br>
+    <input type="button" class="buttons" value="Reset" (click)="reset()">
+  </div>
+
+  <div class="firstForm">
+    <input type="text" placeholder="Enter you first name" [(ngModel)]="firstName"><br>
+    <div class="invalidDiv" *ngIf="!validateName">
+      Not valid Name
+    </div><br>
+    <input type="number" placeholder="Enter you age" [(ngModel)]="age"><br>
+    <div class="invalidDiv" *ngIf="!validateAge">
+      Not valid Age
+    </div><br>
+    <br>
+    <br>
+    <input type="button" class="buttons" value="Add" (click)="addNewRecord()">
+    <h2>Records</h2>
+    <table id="customers">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First name</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let r of peopleRecords; index as i">
+          <td>{{i+1}}</td>
+          <td>{{r.name}}</td>
+          <td>{{r.age}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+</div>
