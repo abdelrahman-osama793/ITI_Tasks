@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserTableComponent } from './user-table/user-table.component';
-import { UserAddComponent } from './user-add/user-add.component';
-import { UserUpdateComponent } from './user-update/user-update.component';
-import { UserDisplayComponent } from './user-display/user-display.component';
+import { UserTableComponent } from './Components/user-table/user-table.component';
+import { UserAddComponent } from './Components/user-add/user-add.component';
+import { UserUpdateComponent } from './Components/user-update/user-update.component';
+import { UserDisplayComponent } from './Components/user-display/user-display.component';
+import { NavbarComponent } from './Components/navbar/navbar.component';
+import { ErrorComponent } from './Components/error/error.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { UserDisplayComponent } from './user-display/user-display.component';
     UserTableComponent,
     UserAddComponent,
     UserUpdateComponent,
-    UserDisplayComponent
+    UserDisplayComponent,
+    NavbarComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
